@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>helloworld</members>
+        <members>json2sObjects</members>
+        <name>DataWeaveResource</name>
+    </types>
+    <version>53.0</version>
+</Package>
