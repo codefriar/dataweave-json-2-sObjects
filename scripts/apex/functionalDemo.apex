@@ -11,20 +11,17 @@ req.setMethod('GET');
 HttpResponse res = h.send(req);
 String incomingJson = res.getBody();
 
-// mapping.put('id','upsertId__c');
 mapping.put('first_name', 'firstName');
 mapping.put('last_name', 'lastName');
 mapping.put('email', 'email');
-// mapping.put('ip_address','last_known_ip_address__c');
-// mapping.put('source', 'app_source__c');
 mapping.put('country', 'mailingCountry');
 mapping.put('StreetAddress', 'mailingStreet');
 mapping.put('city', 'mailingCity');
 mapping.put('state', 'mailingState');
 mapping.put('postalCode', 'mailingPostalCode');
 
-DWJson jsonUtils = new DWJson(incomingJson, JSON.serialize(mapping));
-List<Contact> contacts = (List<Contact>) jsonUtils.translateToSObjects(
-  'Contact'
+DWJson DWJsonToSObjectsList = new DWJson(incomingJson, JSON.serialize(mapping));
+List<Contact> contacts = (List<Contact>) DWJsonToSObjectsList.translateToSObjects(
+    'Contact'
 );
 insert contacts;

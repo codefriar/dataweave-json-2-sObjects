@@ -4,5 +4,9 @@
     "**/bower_components": true,
     "**/.sfdx": true
   },
-  "salesforcedx-vscode-core.show-cli-success-msg": false
+  "salesforcedx-vscode-core.show-cli-success-msg": false,
+  "cSpell.words": [
+    "Dataweave",
+    "JSONTESTBODY"
+  ]
 }
